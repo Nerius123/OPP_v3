@@ -18,6 +18,7 @@
 - [v1.2 versija](#v12-versija)
 - [v1.5 versija](#v15-versija)
 - [v2.0 versija](#v20-versija)
+- [v3.0 versija](#v30-versija)
 
 
 # Projekto atsisiuntimo instrukcija
@@ -330,6 +331,22 @@ Testavimo metu turėtų būti gaunamas rezultatas: `All tests passed (16 asserti
 - Move priskyrimo operatorius
 - Destruktorius
 
+# v3.0 versija
+
+## MyVector klasės testavimas
+
+Atlikti testai su `MyVector` šablonu, siekiant užtikrinti, kad jis veikia taip pat kaip `std::vector`.
+Atlikti vienetiniai testai (unit tests) su `Catch2` , siekiant įsitikinti, kad veikimas yra toks pat.
+
+Testuotos šios funkcijos:
+- `push_back` – prideda elementą į vektoriaus pabaigą
+- `resize` – keičia vektoriaus dydį (didesnis/mažesnis)
+- `insert` – įterpia reikšmę į nurodytą poziciją
+- `operator[]` – prieiga prie elemento per indeksą
+- `at()` – saugi prieiga su ribų tikrinimu (`std::out_of_range`)
+- `operator==` – lygina du `MyVector` objektus
+
+Visi testai įvykdyti sėkmingai – `MyVector` elgiasi identiškai kaip `std::vector`. Padengta daugiau nei 80% pagrindinio funkcionalumo.
 
 # Programos testavimo rezultatai pradiniam v1.0 release
 
