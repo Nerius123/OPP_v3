@@ -24,6 +24,8 @@
 
 #include "../my_library.h"
 #include "zmogus.h"
+#include "Vector.h"
+
 
 /**
  * @brief Klasė, aprašanti studentą.
@@ -33,7 +35,7 @@
 
 class Student : public Zmogus {
     private:
-    vector<int> grades_; //rasau zodzio gale _ del to kad butu lengviau atskirti private kintamaji nuo funkcijos parametro
+    MyVector<int> grades_; //rasau zodzio gale _ del to kad butu lengviau atskirti private kintamaji nuo funkcijos parametro
     int examGrade_; // tas pats
 
 public:
@@ -86,7 +88,7 @@ public:
      * @brief Gauti studento namų darbų pažymius.
      * @return Pažymiai.
      */
-    inline const std::vector<int>& grades() const { return grades_; }
+    inline const MyVector<int>& grades() const { return grades_; }
     /**
      * @brief Gauti egzamino pažymį.
      * @return Egzamino balas.
@@ -98,7 +100,7 @@ public:
      * @brief Nustatyti studento namų darbų pažymius.
      * @param grades Nauji pažymiai.
      */
-    inline void setGrades(const std::vector<int>& grades) { grades_ = grades; }
+    inline void setGrades(const MyVector<int>& grades) { grades_ = grades; }
     /**
      * @brief Nustatyti egzamino pažymį.
      * @param examGrade Naujas egzamino balas.
