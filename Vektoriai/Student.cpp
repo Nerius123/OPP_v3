@@ -1,4 +1,5 @@
 #include "Student.h"
+#include "vector.h"
 
 // Konstruktorius
 Student::Student() : examGrade_(0) {}
@@ -58,7 +59,7 @@ double Student::calculateMedian() const {
         throw std::runtime_error("Negalima skaiciuoti medianos be pazymiu.");
     }
 
-    vector<int> sorted = grades_;
+    MyVector<int> sorted = grades_;
     sort(sorted.begin(), sorted.end());
 
     size_t n = sorted.size();

@@ -24,7 +24,7 @@
 
 #include "../my_library.h"
 #include "zmogus.h"
-#include "Vector.h"
+#include "vector.h"
 
 
 /**

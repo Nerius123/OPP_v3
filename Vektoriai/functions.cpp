@@ -25,7 +25,7 @@ void inputStudentData(Student &s) {
         // Namu darbu balu ivedimas
         cout << "Iveskite namu darbu balus (1-10). Iveskite -1, jei norite baigti.\n";
         int grade;
-        vector<int> nd;
+        MyVector<int> nd;
         while (true) {
             cin >> grade;
             if (cin.fail()) {
@@ -126,7 +126,7 @@ void readFromFile(vector<Student> &students, const string &filename) {
             s.setSurname(pavarde);
 
             int grade;
-            vector<int> tempGrades;
+            MyVector<int> tempGrades;
             while (iss >> grade) {
                 tempGrades.push_back(grade);
             }
