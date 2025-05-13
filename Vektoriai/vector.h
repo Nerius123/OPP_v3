@@ -191,7 +191,19 @@ class MyVector{
 
             return dat + index; // Grąžinti iteratorių, rodantį į įterptą elementą
 }
+        iterator insert(iterator pos, size_type count, const T& value) {
+            size_type index = pos - dat;
+            if (size() + count > capacity()) {
+            reserve(size() + count);
+        }
 
+        pos = dat + index;
+        std::move_backward(pos, avail, avail + count);
+        std::uninitialized_fill(pos, pos + count, value);
+        avail += count;
+
+        return pos;
+}
         iterator erase(iterator position) {
             if (position < dat || position > avail) {
                 throw std::out_of_range("Index'as isejo is riibu");
