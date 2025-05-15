@@ -22,6 +22,7 @@ void splitStudents2(vector<Student>& students, vector<Student>& vargsiukai, bool
 void splitStudents1(const vector<Student>& students, vector<Student>& vargsiukai, vector<Student>& kietiakiai, bool useMedian);
 void saveStudentsToFile(const vector<Student>& students, const string& filename);
 void testDataProcessing(const string& filename, int strategy);
+void testVectorSpeedComparison();
 
 
 #endif  // Baigiame header guard (apsauga nuo pakartotinio įtraukimo)

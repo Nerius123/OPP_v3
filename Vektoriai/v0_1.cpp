@@ -189,7 +189,15 @@ int main() {
                 // Zmogus z(string("Vardenis"), string("Pavardenis"));
             }
 
-            else if (choice == 10) {
+            else if (choice == 10){
+                cout << endl;
+                cout << string(55, '-') << "\n";
+                cout << "Testuojamas spartos palyginimas std::vector ir MyVector:\n";
+                cout << string(55, '-') << "\n";
+                testVectorSpeedComparison();
+            }
+
+            else if (choice == 11) {
                 cout << "Programa baigta!" << endl;
                 break;
             }

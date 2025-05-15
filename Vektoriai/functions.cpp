@@ -75,7 +75,8 @@ void displayMenu() {
     cout << "7. Testuoti duomenu apdorojimo greiti (nuskaitymas, rusiavimas, irasymas)" << endl;
     cout << "8. Atlikti Rule of five testa" << endl;
     cout << "9. Testuoti ar galima sukurti Zmogus objekta" << endl;
-    cout << "10. Baigti programa" << endl;
+    cout << "10. Vektoriu (std::vector vs MyVector) greicio testavimas/palyginimas\n";
+    cout << "11. Baigti programa" << endl;
     cout << "Pasirinkite: ";
 }
 
@@ -518,3 +519,32 @@ void TestRuleOfFive(const Student& s) {
 
         cout << "Testas baigtas!\n";
     }
+
+    void testVectorSpeedComparison() {;
+
+    vector<unsigned int> sizes = {10000, 100000, 1000000, 10000000};
+    cout << "\n--- Greicio palyginimas tarp std::vector ir MyVector ---\n";
+    cout << setw(15) << "Elementai" << setw(20) << "std::vector (s)" << setw(20) << "MyVector (s)\n";
+    cout << string(55, '-') << "\n";
+
+    for (unsigned int sz : sizes) {
+        // std::vector matavimas
+        auto start_std = high_resolution_clock::now();
+        std::vector<int> v1;
+        for (unsigned int i = 0; i < sz; ++i) v1.push_back(i);
+        auto end_std = high_resolution_clock::now();
+
+        // MyVector matavimas
+        auto start_my = high_resolution_clock::now();
+        MyVector<int> v2;
+        for (unsigned int i = 0; i < sz; ++i) v2.push_back(i);
+        auto end_my = high_resolution_clock::now();
+
+        auto dur_std = duration<double>(end_std - start_std).count();
+        auto dur_my = duration<double>(end_my - start_my).count();
+
+        cout << setw(15) << sz << setw(20) << dur_std << setw(20) << dur_my << "\n";
+    }
+
+    cout << "-------------------------------------------------------\n\n";
+}
