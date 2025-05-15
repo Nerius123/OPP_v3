@@ -384,6 +384,8 @@ Perskirstymų skaičius buvo stebimas kiekvieną kartą padidėjus `capacity()` 
 
 Rezultatai parodė, kad `MyVector` konteinerio augimo strategija (dvigubinti talpą) veikia taip pat efektyviai kaip ir `std::vector`, nes perskirstymų skaičius buvo identiškas. Tai patvirtina, kad grow() funkcija veikia optimaliai ir atitinka STL konteinerių veikimo principus.
 
+Testavimas atliktas per meniu punktą „11. Vektoriu (std::vector vs MyVector) perskirstymo kiekio palyginimas“.
+
 ---
 
 # Programos testavimo rezultatai pradiniam v1.0 release
