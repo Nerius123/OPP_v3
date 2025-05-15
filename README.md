@@ -104,7 +104,13 @@
    - Bandoma sukurti Zmogus objektą. 
    - Eilutė palikta komentare, nes tokio tipo objektų kurti negalima (tai sukelia kompiliavimo klaidą).
 
-10. Baigti programą
+10. Vektorių (std::vector vs MyVector) greičio testavimas/palyginimas
+   - Atliekamas duomenų įkėlimo į standartinį std::vector ir tavo sukurtą MyVector greičio palyginimas.
+
+11. Vektorių (std::vector vs MyVector) perskirstymo kiekio palyginimas
+   - Funkcija suskaičiuoja, kiek kartų įvyksta atminties perskirstymas (reallocation) abiejuose vektoriuose, kai didinamas jų dydis.
+
+12. Baigti programą
    - Programa baigia darbą.
 
 # Pradinė versija
