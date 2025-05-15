@@ -48,6 +48,7 @@
 
 - Įvesti studentų duomenis rankiniu būdu
 - Nuskaityti studentus iš įvairaus dydžio failų
+- Išsaugoti rezultatus į pasirinktą failą
 - Skaičiuoti galutinius pažymius (naudojant **vidurkį** arba **medianą**)
 - Rūšiuoti studentus pagal pažangumą ar pavardes
 - Skirstyti juos į dvi kategorijas: **kietiakus** ir **vargšiukus**
@@ -56,6 +57,8 @@
 - Tikrinti `Rule of Five` metodų veikimą
 - Atlikti vienetinius (unit) testus naudojant **Catch2** framework'ą
 - Pamatyti demonstraciją, kad abstrakti `Zmogus` klasė negali būti sukurta
+- Lyginti vektorių (`std::vector` vs `MyVector`) veikimo greitį
+- Lyginti vektorių (`std::vector` vs `MyVector`) atminties perskirstymo kiekį (suskaičiuojamas *capacity* padidėjimų skaičius)
 
 ---
 
