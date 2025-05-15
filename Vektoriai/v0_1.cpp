@@ -198,7 +198,7 @@ int main() {
             }
 
             else if (choice == 11) {
-            cout << "Atliekamas perskirstymo testas (100 mln. elementų)...\n";
+            cout << "Atliekamas perskirstymo testas (100 mln. elementu)...\n";
             compareReallocationCounts();
             }
 

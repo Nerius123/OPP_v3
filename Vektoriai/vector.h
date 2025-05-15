@@ -263,6 +263,11 @@ class MyVector{
             std::swap(x,y);
         }
 
+        static int reallocations;
+        static void resetReallocations() { reallocations = 0; }
+        static int getReallocations() { return reallocations; }
+
+
     private:
         iterator dat;
         iterator avail;
@@ -289,6 +294,7 @@ class MyVector{
             dat = limit = avail = nullptr;
         }
         void grow(size_type new_capacity = 1) {
+            ++reallocations;
             size_type new_size = std::max(new_capacity, 2 * capacity());
             iterator new_data = alloc.allocate(new_size);
             iterator new_avail = std::uninitialized_copy(dat, avail, new_data);
@@ -301,5 +307,9 @@ class MyVector{
             alloc.construct(avail++, val);
         }
 };
+
+template <typename T>
+int MyVector<T>::reallocations = 0;
+
 
 #endif // MyVector_H

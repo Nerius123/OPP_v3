@@ -573,6 +573,6 @@ void compareReallocationCounts() {
     }
 
     cout << "\n==== Atminties perskirstymo palyginimas ====\n";
-    cout << "std::vector perskirstymų: " << stdReallocs << "\n";
-    cout << "MyVector   perskirstymų: " << MyVector<int>::getReallocations() << "\n";
+    cout << "std::vector perskirstymu: " << stdReallocs << "\n";
+    cout << "MyVector perskirstymu: " << MyVector<int>::getReallocations() << "\n";
 }
