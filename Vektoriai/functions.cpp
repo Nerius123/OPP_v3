@@ -76,7 +76,8 @@ void displayMenu() {
     cout << "8. Atlikti Rule of five testa" << endl;
     cout << "9. Testuoti ar galima sukurti Zmogus objekta" << endl;
     cout << "10. Vektoriu (std::vector vs MyVector) greicio testavimas/palyginimas\n";
-    cout << "11. Baigti programa" << endl;
+    cout << "11. Vektoriu (std::vector vs MyVector) **perskirstymo kiekio palyginimas**" << endl;
+    cout << "12. Baigti programa" << endl;
     cout << "Pasirinkite: ";
 }
 
@@ -547,4 +548,31 @@ void TestRuleOfFive(const Student& s) {
     }
 
     cout << "-------------------------------------------------------\n\n";
+}
+
+void compareReallocationCounts() {
+    const unsigned int N = 100000000;
+
+    // std::vector
+    std::vector<int> stdVec;
+    int stdReallocs = 0;
+    size_t prevCap = stdVec.capacity();
+    for (unsigned int i = 0; i < N; ++i) {
+        stdVec.push_back(i);
+        if (stdVec.capacity() != prevCap) {
+            ++stdReallocs;
+            prevCap = stdVec.capacity();
+        }
+    }
+
+    // MyVector
+    MyVector<int>::resetReallocations();
+    MyVector<int> myVec;
+    for (unsigned int i = 0; i < N; ++i) {
+        myVec.push_back(i);
+    }
+
+    cout << "\n==== Atminties perskirstymo palyginimas ====\n";
+    cout << "std::vector perskirstymų: " << stdReallocs << "\n";
+    cout << "MyVector   perskirstymų: " << MyVector<int>::getReallocations() << "\n";
 }

@@ -23,6 +23,7 @@ void splitStudents1(const vector<Student>& students, vector<Student>& vargsiukai
 void saveStudentsToFile(const vector<Student>& students, const string& filename);
 void testDataProcessing(const string& filename, int strategy);
 void testVectorSpeedComparison();
+void compareReallocationCounts();
 
 
 #endif  // Baigiame header guard (apsauga nuo pakartotinio įtraukimo)
