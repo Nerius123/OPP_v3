@@ -371,6 +371,17 @@ Buvo atlikta `std::vector` ir savos `MyVector` klasės spartos analizė, naudoja
 
 ---
 
+### Atminties perskirstymo palyginimas (100 000 000 elementų)
+
+| Konteineris   | Perskirstymų skaičius |
+|---------------|------------------------|
+| std::vector   | 28                     |
+| MyVector      | 28                     |
+
+Abi klasės efektyviai tvarko atmintį.
+
+---
+
 # Programos testavimo rezultatai pradiniam v1.0 release
 
 ## 1000 Studentų analizė
