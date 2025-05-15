@@ -348,16 +348,28 @@ Testuotos šios funkcijos:
 
 Visi testai įvykdyti sėkmingai – `MyVector` elgiasi identiškai kaip `std::vector`. Padengta daugiau nei 80% pagrindinio funkcionalumo.
 
+---
+
 ## std::vector ir MyVector spartos palyginimas
 
 Buvo atlikta `std::vector` ir savos `MyVector` klasės spartos analizė, naudojant `push_back()` funkciją. Testo metu matuota, kiek laiko užtrunka užpildyti tuščius vektorius 10 000, 100 000, 1 000 000, 10 000 000 ir 100 000 000 int tipo elementų.
 
+| **Elementų skaičius**  | **std::vector (s)**   | **MyVector (s)**  |
+|------------------------|-----------------------|-------------------|
+| 10 000                 | 0.000311              | 0.000148          |
+| 100 000                | 0.00248               | 0.00159           |
+| 1 000 000              | 0.02559               | 0.01165           |
+| 10 000 000             | 0.25942               | 0.13269           |
+| 100 000 000            | 2.67466               | 1.39979           |
+
 ### Išvados
 
-- `MyVector` klasė pasirodė vidutiniškai *1.8 karto* greitesnė už `std::vector`, atliekant push_back() operacijas.
+- `MyVector` klasė pasirodė vidutiniškai *1.8 karto* greitesnė už `std::vector`, atliekant `push_back()` operacijas.
 - Skirtumas ypač ryškus su dideliais kiekiais duomenų: prie 100 milijonų elementų `MyVector` *veikė ~1.2 sek greičiau.*
 - Galima priežastis – optimizuota atminties augimo logika bei mažesni papildomi patikrinimai.
 - Testavimas atliktas per meniu punktą *„10. Testuojamas spartos palyginimas std::vector ir MyVector“*.
+
+---
 
 # Programos testavimo rezultatai pradiniam v1.0 release
 
