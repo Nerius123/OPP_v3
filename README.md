@@ -371,7 +371,7 @@ Buvo atlikta `std::vector` ir savos `MyVector` klasės spartos analizė, naudoja
 
 ---
 
-### Atminties perskirstymo palyginimas (100 000 000 elementų)
+## Atminties perskirstymo palyginimas (100 000 000 elementų)
 
 Atliktas testavimas su 100 000 000 int tipo elementų, buvo stebima, kiek kartų vektoriai `std::vector` ir mano sukurtas `MyVector` priversti perskirstyti atmintį (t. y. kai ***capacity() == size()*** ir reikia rezervuoti naują vietą).
 
