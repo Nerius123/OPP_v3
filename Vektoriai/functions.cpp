@@ -522,7 +522,7 @@ void TestRuleOfFive(const Student& s) {
 
     void testVectorSpeedComparison() {;
 
-    vector<unsigned int> sizes = {10000, 100000, 1000000, 10000000};
+    vector<unsigned int> sizes = {10000, 100000, 1000000, 10000000, 100000000};
     cout << "\n--- Greicio palyginimas tarp std::vector ir MyVector ---\n";
     cout << setw(15) << "Elementai" << setw(20) << "std::vector (s)" << setw(20) << "MyVector (s)\n";
     cout << string(55, '-') << "\n";
