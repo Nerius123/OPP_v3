@@ -373,12 +373,16 @@ Buvo atlikta `std::vector` ir savos `MyVector` klasės spartos analizė, naudoja
 
 ### Atminties perskirstymo palyginimas (100 000 000 elementų)
 
-| Konteineris   | Perskirstymų skaičius |
-|---------------|------------------------|
-| std::vector   | 28                     |
-| MyVector      | 28                     |
+Atliktas testavimas su 100 000 000 int tipo elementų, buvo stebima, kiek kartų vektoriai `std::vector` ir mano sukurtas `MyVector` priversti perskirstyti atmintį (t. y. kai ***capacity() == size()*** ir reikia rezervuoti naują vietą).
 
-Abi klasės efektyviai tvarko atmintį.
+Perskirstymų skaičius buvo stebimas kiekvieną kartą padidėjus `capacity()` reikšmei.
+
+| Konteineris     | Perskirstymų skaičius  |
+|-----------------|------------------------|
+| `std::vector`   | 28                     |
+| `MyVector`      | 28                     |
+
+Rezultatai parodė, kad `MyVector` konteinerio augimo strategija (dvigubinti talpą) veikia taip pat efektyviai kaip ir `std::vector`, nes perskirstymų skaičius buvo identiškas. Tai patvirtina, kad grow() funkcija veikia optimaliai ir atitinka STL konteinerių veikimo principus.
 
 ---
 
