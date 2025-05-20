@@ -323,7 +323,7 @@ Yra matoma aiški klaida: `cannot declare variable 'z' to be of abstract type 'Z
 Naudojamas: **Catch2**  
 Testai parašyti faile `tests.cpp`, naudojamas `catch.hpp`.
 
-## Paleidimas
+### Paleidimas
 
 ```bash
 g++ tests.cpp Student.cpp Zmogus.cpp -o testai && testai
@@ -394,6 +394,27 @@ Perskirstymų skaičius buvo stebimas kiekvieną kartą padidėjus `capacity()` 
 Rezultatai parodė, kad `MyVector` konteinerio augimo strategija (dvigubinti talpą) veikia taip pat efektyviai kaip ir `std::vector`, nes perskirstymų skaičius buvo identiškas. Tai patvirtina, kad grow() funkcija veikia optimaliai ir atitinka STL konteinerių veikimo principus.
 
 Testavimas atliktas per meniu punktą „11. Vektoriu (std::vector vs MyVector) perskirstymo kiekio palyginimas“.
+
+---
+## Testavimas savo sukurto konteinerio naudojant *Catch*
+
+Naudojamas: Catch2
+Testas parašytas faile: `test_MyVector.cpp`
+Biblioteka: catch.hpp
+
+### Paleidimas
+
+```bash
+g++ -std=c++17 test_MyVector.cpp -o test_vector && test_vector
+
+Testavimo metu turėtų būti gaunamas rezultatas: `All tests passed (14 assertions in 5 test cases)`. 
+```
+### Testavimas:
+
+Testuojame, ar `MyVector` klasė veikia teisingai:
+- Ar teisingai įterpia, pasiekia, keičia ir šalina elementus
+- Ar veikia metodai: push_back, at, resize, clear, operator==, empty, ir t.t.
+- Ar `MyVector` elgiasi taip pat kaip `std::vector` įprastose situacijose
 
 ---
 
