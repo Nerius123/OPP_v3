@@ -75,8 +75,8 @@ void displayMenu() {
     cout << "7. Testuoti duomenu apdorojimo greiti (nuskaitymas, rusiavimas, irasymas)" << endl;
     cout << "8. Atlikti Rule of five testa" << endl;
     cout << "9. Testuoti ar galima sukurti Zmogus objekta" << endl;
-    cout << "10. Vektoriu (std::MyVector vs MyVector) greicio testavimas/palyginimas\n";
-    cout << "11. Vektoriu (std::MyVector vs MyVector) perskirstymo kiekio palyginimas" << endl;
+    cout << "10. Vektoriu (std::vector vs MyVector) greicio testavimas/palyginimas\n";
+    cout << "11. Vektoriu (std::vector vs MyVector) perskirstymo kiekio palyginimas" << endl;
     cout << "12. Baigti programa" << endl;
     cout << "Pasirinkite: ";
 }
