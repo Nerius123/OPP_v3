@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['table_0',['table',['../namespace_catch_1_1_generators.html#ae980a8b181bc56242a73161a05b312ee',1,'Catch::Generators']]],
+  ['tagsasstring_1',['tagsAsString',['../struct_catch_1_1_test_case_info.html#a17506de67fb18e27511c17f8a81119d8',1,'Catch::TestCaseInfo']]],
+  ['take_2',['take',['../namespace_catch_1_1_generators.html#adedfdb318219078ce9107690745d2f2f',1,'Catch::Generators']]],
+  ['takegenerator_3',['TakeGenerator',['../class_catch_1_1_generators_1_1_take_generator.html#aacef789c01a86246249c88a184268c65',1,'Catch::Generators::TakeGenerator']]],
+  ['test_4',['test',['../struct_catch_1_1is__callable__tester.html#a9f770cae4c16dfa96d4c0299a6b4f980',1,'Catch::is_callable_tester::test(int)'],['../struct_catch_1_1is__callable__tester.html#adce16c4accb860bf46f6491dd70cfd63',1,'Catch::is_callable_tester::test(...)']]],
+  ['test_5fcase_5',['TEST_CASE',['../test___my_vector_8cpp.html#a2404e5a7b78939bc9834d91888c4e323',1,'TEST_CASE(&quot;MyVector push_back ir operator[] veikia&quot;, &quot;[MyVector]&quot;):&#160;test_MyVector.cpp'],['../test___my_vector_8cpp.html#adfb33aa037139e5de50d1bb430aa0855',1,'TEST_CASE(&quot;MyVector at() suveikia su validžiu ir out-of-range indeksu&quot;, &quot;[MyVector]&quot;):&#160;test_MyVector.cpp'],['../test___my_vector_8cpp.html#ab59269e3f7b1b4523e5b98034a9bf164',1,'TEST_CASE(&quot;MyVector resize() padidina ir sumažina&quot;, &quot;[MyVector]&quot;):&#160;test_MyVector.cpp'],['../test___my_vector_8cpp.html#ada72dcda39c5152b6547fd59d6292ba5',1,'TEST_CASE(&quot;MyVector operator== ir !=&quot;, &quot;[MyVector]&quot;):&#160;test_MyVector.cpp'],['../test___my_vector_8cpp.html#a3dd8c8d135241bfdfcc7451c24d2acb5',1,'TEST_CASE(&quot;MyVector clear() isvalo viska&quot;, &quot;[MyVector]&quot;):&#160;test_MyVector.cpp'],['../tests_8cpp.html#a8216dd86dab8270f8c0e4bfa56750c61',1,'TEST_CASE(&quot;Kopijavimo konstruktorius&quot;):&#160;tests.cpp'],['../tests_8cpp.html#aad874a81c157cd36c77abc92f22c9b3b',1,'TEST_CASE(&quot;Kopijavimo priskyrimo operatorius&quot;):&#160;tests.cpp'],['../tests_8cpp.html#a1b364575d86dd95f03b2ad6ed00a428f',1,'TEST_CASE(&quot;Move konstruktorius&quot;):&#160;tests.cpp'],['../tests_8cpp.html#abf19db72921f9aef20fecb7df1a2a3e6',1,'TEST_CASE(&quot;Move priskyrimo operatorius&quot;):&#160;tests.cpp']]],
+  ['testcase_6',['TestCase',['../class_catch_1_1_test_case.html#aae5709fc1cb68e19ab0ac27e1ffd6a76',1,'Catch::TestCase']]],
+  ['testcaseinfo_7',['TestCaseInfo',['../struct_catch_1_1_test_case_info.html#ad1a6b08b5a83d1c5eb4596b727b5305f',1,'Catch::TestCaseInfo']]],
+  ['testdataprocessing_8',['testDataProcessing',['../functions_8cpp.html#a9552bf3629a0a34f8faaf652fa466d92',1,'testDataProcessing(const string &amp;filename, int strategy):&#160;functions.cpp'],['../functions_8h.html#a9552bf3629a0a34f8faaf652fa466d92',1,'testDataProcessing(const string &amp;filename, int strategy):&#160;functions.cpp']]],
+  ['testinvokerasmethod_9',['TestInvokerAsMethod',['../class_catch_1_1_test_invoker_as_method.html#a119c4bdbbdd95c42859c18541987a1a4',1,'Catch::TestInvokerAsMethod']]],
+  ['testruleoffive_10',['TestRuleOfFive',['../functions_8cpp.html#abdfbfb4270ddcc48ba3a0a1cf8187cd4',1,'TestRuleOfFive(const Student &amp;s):&#160;functions.cpp'],['../functions_8h.html#abdfbfb4270ddcc48ba3a0a1cf8187cd4',1,'TestRuleOfFive(const Student &amp;s):&#160;functions.cpp']]],
+  ['testspec_11',['testSpec',['../struct_catch_1_1_i_config.html#a6c021a1bf5cae58cb6c4b754af6cd4b5',1,'Catch::IConfig']]],
+  ['testvectorspeedcomparison_12',['testVectorSpeedComparison',['../functions_8cpp.html#a58b285f1018516df952b11728257bea6',1,'testVectorSpeedComparison():&#160;functions.cpp'],['../functions_8h.html#a58b285f1018516df952b11728257bea6',1,'testVectorSpeedComparison():&#160;functions.cpp']]],
+  ['throw_5fdomain_5ferror_13',['throw_domain_error',['../namespace_catch.html#ae67297c3e265b0fcd55de371bf408e4e',1,'Catch']]],
+  ['throw_5fexception_14',['throw_exception',['../namespace_catch.html#a3cbceeab9252d1b752f66a2826e92548',1,'Catch']]],
+  ['throw_5flogic_5ferror_15',['throw_logic_error',['../namespace_catch.html#a707884e681203fef6bf7dbf752532fa5',1,'Catch']]],
+  ['throw_5fruntime_5ferror_16',['throw_runtime_error',['../namespace_catch.html#a48d2c35022dd9d56a1b7ee78ad581eea',1,'Catch']]],
+  ['throws_17',['throws',['../struct_catch_1_1_test_case_info.html#afc70d4379a2070cc22b693ffe3932c1a',1,'Catch::TestCaseInfo']]],
+  ['tolower_18',['toLower',['../namespace_catch.html#ac036a17412d318598ffda8e1fe7a1177',1,'Catch']]],
+  ['tolowerinplace_19',['toLowerInPlace',['../namespace_catch.html#a0760dbe87d090a55a35414db57d272c4',1,'Catch']]],
+  ['tostring_20',['toString',['../class_catch_1_1_detail_1_1_approx.html#a972fd9ac60607483263f1b0f0f9955e6',1,'Catch::Detail::Approx::toString()'],['../class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base.html#a5982c7c80ca71dfe2298babadad7a453',1,'Catch::Matchers::Impl::MatcherUntypedBase::toString()']]],
+  ['total_21',['total',['../struct_catch_1_1_counts.html#a94f969c09cf52d1339c085c9603cd1d3',1,'Catch::Counts']]],
+  ['translate_22',['translate',['../struct_catch_1_1_i_exception_translator.html#a2a554b96ed5ed411e7c796b6b42837a5',1,'Catch::IExceptionTranslator']]],
+  ['translateactiveexception_23',['translateActiveException',['../struct_catch_1_1_i_exception_translator_registry.html#af76ae8c331a17f2a94c9720bc0d686bb',1,'Catch::IExceptionTranslatorRegistry::translateActiveException()'],['../namespace_catch.html#adafff91485eeeeb9e9333f317cc0e3b1',1,'Catch::translateActiveException()']]],
+  ['trim_24',['trim',['../namespace_catch.html#a084108b47f37d8bfd5db51c50c7451b3',1,'Catch::trim(std::string const &amp;str)'],['../namespace_catch.html#a6f6d8ef0349688290bd242b50a702c28',1,'Catch::trim(StringRef ref)']]]
+];

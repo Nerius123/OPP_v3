@@ -1,9 +1,17 @@
 var searchData=
 [
-  ['calculateaverage_0',['calculateAverage',['../class_student.html#a92a96071e442ba4e10f984f18fc24874',1,'Student::calculateAverage()'],['../functions_8h.html#af912676bdbbbec9a874e0196f5c2070e',1,'calculateAverage():&#160;functions.h']]],
-  ['calculatefinalgrade_1',['calculateFinalGrade',['../class_student.html#a67061bc09d327bb12fe88bca0da8ac9b',1,'Student::calculateFinalGrade()'],['../functions_8h.html#a76f7843c1578f2de6749badacce9644d',1,'calculateFinalGrade():&#160;functions.h']]],
-  ['calculatemedian_2',['calculateMedian',['../class_student.html#a1d4c9b5950ee0da4bd24670530e80e5d',1,'Student::calculateMedian()'],['../functions_8h.html#a76bd324833f698a03e4771a2154c5361',1,'calculateMedian(const Student &amp;s):&#160;functions.h']]],
-  ['comparebyfinalgrade_3',['compareByFinalGrade',['../_student_8h.html#af994b8dcb5929d6687de332e7425d3f6',1,'Student.h']]],
-  ['comparebyname_4',['compareByName',['../_student_8h.html#afed1ed2589975ed12e100a2b0d1d2d20',1,'Student.h']]],
-  ['comparebysurname_5',['compareBySurname',['../_student_8h.html#a5b18751060a6d1dab40133df8fb0cf46',1,'Student.h']]]
+  ['abortafter_0',['abortAfter',['../struct_catch_1_1_i_config.html#a363f3388a439d02217f37198eff96744',1,'Catch::IConfig']]],
+  ['aborting_1',['aborting',['../struct_catch_1_1_i_runner.html#a03713202dd2e041e30b8030088ab0116',1,'Catch::IRunner']]],
+  ['acquiregeneratortracker_2',['acquireGeneratorTracker',['../struct_catch_1_1_i_result_capture.html#a8f93a848e0a48b630ca9ecbf225e4817',1,'Catch::IResultCapture::acquireGeneratorTracker()'],['../namespace_catch_1_1_generators.html#ac1fe3550c5f97370fc6729e04d7571b8',1,'Catch::Generators::acquireGeneratorTracker()']]],
+  ['adjuststring_3',['adjustString',['../struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string.html#a77639b1165c01f424ee0e96f53335010',1,'Catch::Matchers::StdString::CasedString']]],
+  ['allok_4',['allOk',['../struct_catch_1_1_counts.html#a33bd996e016030155b99fe1c51c08991',1,'Catch::Counts']]],
+  ['allowthrows_5',['allowThrows',['../class_catch_1_1_assertion_handler.html#a193bb3999494c46457f3059184c6b251',1,'Catch::AssertionHandler::allowThrows()'],['../struct_catch_1_1_i_config.html#aadb95f849359de1e6eb915aab063e542',1,'Catch::IConfig::allowThrows()']]],
+  ['allpassed_6',['allPassed',['../struct_catch_1_1_counts.html#a84999490e0ecaa3de5e121bf48eda1b3',1,'Catch::Counts']]],
+  ['approx_7',['Approx',['../class_catch_1_1_detail_1_1_approx.html#a1a8618ea8db08c66bd3d9fe8f74b957a',1,'Catch::Detail::Approx::Approx(double value)'],['../class_catch_1_1_detail_1_1_approx.html#ab14b979fa8a37f21d037157fabed4072',1,'Catch::Detail::Approx::Approx(T const &amp;value)'],['../namespace_catch_1_1_matchers.html#a02bf172177011d09780a98635dc5a124',1,'Catch::Matchers::Approx()']]],
+  ['approxmatcher_8',['ApproxMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_approx_matcher.html#a23147d891d3d9b6bb0af599ee87bbcc2',1,'Catch::Matchers::Vector::ApproxMatcher']]],
+  ['assertionhandler_9',['AssertionHandler',['../class_catch_1_1_assertion_handler.html#a32efbb1b56b71d758d4c2094bac1f1a9',1,'Catch::AssertionHandler']]],
+  ['assertionpassed_10',['assertionPassed',['../struct_catch_1_1_i_result_capture.html#a9b0ef2cb071e9a9dc6ec1b533026aea7',1,'Catch::IResultCapture']]],
+  ['assign_11',['assign',['../class_my_vector.html#a53b0457284c2b12c00b7e871cc8e0e70',1,'MyVector::assign(InputIterator first, InputIterator last)'],['../class_my_vector.html#aa766b97886166af133044d702627c1e1',1,'MyVector::assign(size_type n, const value_type &amp;val)'],['../class_my_vector.html#a3d318f314994fbff248d22835a9bba5d',1,'MyVector::assign(std::initializer_list&lt; value_type &gt; il)']]],
+  ['at_12',['at',['../class_my_vector.html#aac78144d577c848578fbb59053325f21',1,'MyVector::at(size_type n)'],['../class_my_vector.html#ac51d9509ce11f4545e986803fac8e071',1,'MyVector::at(size_type n) const']]],
+  ['autoreg_13',['AutoReg',['../struct_catch_1_1_auto_reg.html#a7eba02fb9d80b9896bf5a6517369af28',1,'Catch::AutoReg']]]
 ];

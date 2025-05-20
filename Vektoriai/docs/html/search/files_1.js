@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['student_2ecpp_0',['Student.cpp',['../_student_8cpp.html',1,'']]],
-  ['student_2eh_1',['Student.h',['../_student_8h.html',1,'']]]
+  ['functions_2ecpp_0',['functions.cpp',['../functions_8cpp.html',1,'']]],
+  ['functions_2eh_1',['functions.h',['../functions_8h.html',1,'']]]
 ];
