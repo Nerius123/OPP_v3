@@ -25,7 +25,7 @@ void inputStudentData(Student &s) {
         // Namu darbu balu ivedimas
         cout << "Iveskite namu darbu balus (1-10). Iveskite -1, jei norite baigti.\n";
         int grade;
-        MyMyVector<int> nd;
+        MyVector<int> nd;
         while (true) {
             cin >> grade;
             if (cin.fail()) {
@@ -75,8 +75,8 @@ void displayMenu() {
     cout << "7. Testuoti duomenu apdorojimo greiti (nuskaitymas, rusiavimas, irasymas)" << endl;
     cout << "8. Atlikti Rule of five testa" << endl;
     cout << "9. Testuoti ar galima sukurti Zmogus objekta" << endl;
-    cout << "10. Vektoriu (std::MyVector vs MyMyVector) greicio testavimas/palyginimas\n";
-    cout << "11. Vektoriu (std::MyVector vs MyMyVector) perskirstymo kiekio palyginimas" << endl;
+    cout << "10. Vektoriu (std::MyVector vs MyVector) greicio testavimas/palyginimas\n";
+    cout << "11. Vektoriu (std::MyVector vs MyVector) perskirstymo kiekio palyginimas" << endl;
     cout << "12. Baigti programa" << endl;
     cout << "Pasirinkite: ";
 }
@@ -128,7 +128,7 @@ void readFromFile(MyVector<Student> &students, const string &filename) {
             s.setSurname(pavarde);
 
             int grade;
-            MyMyVector<int> tempGrades;
+            MyVector<int> tempGrades;
             while (iss >> grade) {
                 tempGrades.push_back(grade);
             }
@@ -521,23 +521,23 @@ void TestRuleOfFive(const Student& s) {
         cout << "Testas baigtas!\n";
     }
 
-    void testMyVectorSpeedComparison() {;
+    void testVectorSpeedComparison() {;
 
     MyVector<unsigned int> sizes = {10000, 100000, 1000000, 10000000, 100000000};
-    cout << "\n--- Greicio palyginimas tarp std::MyVector ir MyMyVector ---\n";
-    cout << setw(15) << "Elementai" << setw(20) << "std::MyVector (s)" << setw(20) << "MyMyVector (s)\n";
+    cout << "\n--- Greicio palyginimas tarp std::vector ir MyVector ---\n";
+    cout << setw(15) << "Elementai" << setw(20) << "std::Vector (s)" << setw(20) << "MyVector (s)\n";
     cout << string(55, '-') << "\n";
 
     for (unsigned int sz : sizes) {
-        // std::MyVector matavimas
+        // std::Vector matavimas
         auto start_std = high_resolution_clock::now();
-        std::MyVector<int> v1;
+        std::vector<int> v1;
         for (unsigned int i = 0; i < sz; ++i) v1.push_back(i);
         auto end_std = high_resolution_clock::now();
 
-        // MyMyVector matavimas
+        // MyVector matavimas
         auto start_my = high_resolution_clock::now();
-        MyMyVector<int> v2;
+        MyVector<int> v2;
         for (unsigned int i = 0; i < sz; ++i) v2.push_back(i);
         auto end_my = high_resolution_clock::now();
 
@@ -553,8 +553,8 @@ void TestRuleOfFive(const Student& s) {
 void compareReallocationCounts() {
     const unsigned int N = 100000000;
 
-    // std::MyVector
-    std::MyVector<int> stdVec;
+    // std::Vector
+    std::vector<int> stdVec;
     int stdReallocs = 0;
     size_t prevCap = stdVec.capacity();
     for (unsigned int i = 0; i < N; ++i) {
@@ -565,14 +565,14 @@ void compareReallocationCounts() {
         }
     }
 
-    // MyMyVector
-    MyMyVector<int>::resetReallocations();
-    MyMyVector<int> myVec;
+    // MyVector
+    MyVector<int>::resetReallocations();
+    MyVector<int> myVec;
     for (unsigned int i = 0; i < N; ++i) {
         myVec.push_back(i);
     }
 
     cout << "\n==== Atminties perskirstymo palyginimas ====\n";
     cout << "std::MyVector perskirstymu: " << stdReallocs << "\n";
-    cout << "MyMyVector perskirstymu: " << MyMyVector<int>::getReallocations() << "\n";
+    cout << "MyVector perskirstymu: " << MyVector<int>::getReallocations() << "\n";
 }

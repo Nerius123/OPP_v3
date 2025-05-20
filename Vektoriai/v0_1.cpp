@@ -131,7 +131,7 @@ int main() {
 
                 bool ascending = (sortOrder == 'a' || sortOrder == 'A');
             
-                vector<Student> vargsiukai, kietiakiai;
+                MyVector<Student> vargsiukai, kietiakiai;
                 
                 // Suskirstymas i dvi grupes
                 splitStudents(students, vargsiukai, kietiakiai, useMedian);
