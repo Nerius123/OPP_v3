@@ -418,6 +418,24 @@ Testuojame, ar `MyVector` klasė veikia teisingai:
 
 ---
 
+## Diegimo instrukcija (Setup.exe)
+
+Norėdami įdiegti programą:
+
+1. Eikite į aplanką `Installer/`.
+2. Paleiskite `Setup.exe` failą kaip administratorių (dešiniu pelės mygtuku > "Run as administrator").
+3. Programa bus įdiegta į:  
+   `C:\Program Files\VU\NerijusPonomariovas\`
+4. Po diegimo:
+   - Darbalaukyje atsiras nuoroda į programą.
+   - Start meniu (per paiešką) rasite: `VU > NerijusPonomariovas`.
+
+Į diegimą taip pat įtraukti failai:
+- `students_10000.txt`
+- `students_100000.txt`
+
+---
+
 # Programos testavimo rezultatai pradiniam v1.0 release
 
 ## 1000 Studentų analizė
