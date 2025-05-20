@@ -3,7 +3,7 @@
 #include "../my_library.h"
 
 int main() {
-    vector<Student> students;
+    MyVector<Student> students;
     int choice;
 
     while (true) {
