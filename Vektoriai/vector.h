@@ -10,18 +10,16 @@
 template <typename T>
 class MyVector{
     public: 
-        typedef size_t size_type;
-        typedef T value_type;
-        typedef T& reference;
-        typedef const T& const_reference;
-        typedef T* iterator;
-        typedef const T* const_iterator;
+        typedef size_t size_type;              // Tipas dydžiui saugoti
+        typedef T value_type;                  // Tipas vektoriaus elementui
+        typedef T& reference;                  // Nuoroda į elementą
+        typedef const T& const_reference;      // Konstanta nuoroda
+        typedef T* iterator;                   // Paprastas iteratorius
+        typedef const T* const_iterator;       // Konstanta iteratorius
 
     //KONSTRUKTORIAI
-        //default
-        MyVector() {create();}
-        //fill
-        explicit MyVector(size_type n, const T& t = T{}) { create (n,t); }
+        MyVector() {create();} // Tuščias vektorius
+        explicit MyVector(size_type n, const T& t = T{}) { create (n,t); } // Vektorius su n reikšmių // MyVector<int> v(3, 5); // {5,5,5}
         //copy constructor
         MyVector(const MyVector& v) { create(v.begin(), v.end()); } 
         //range constructor
@@ -33,7 +31,7 @@ class MyVector{
             swap(v);
             v.uncreate();
         }
-        //initializer list constructor
+        //initializer list constructor // MyVector<int> v = {1, 2, 3};
         MyVector(const std::initializer_list<T> il) { create(il.begin(), il.end()); }
 
     // Destruktorius
@@ -63,15 +61,15 @@ class MyVector{
         }
 
     // Iteratoriai
-        iterator begin() {return dat;}
+        iterator begin() {return dat;} // Pradžios iteratorius
         const_iterator begin() const {return dat;}
-        iterator end() {return avail;}
+        iterator end() {return avail;} // Pabaigos iteratorius
         const_iterator end() const {return avail;}
 
     // talpa
-        size_type size() const {return avail-dat;}
-        size_type max_size() const {return std::numeric_limits<size_type>::max();}
-        void resize(size_type sz) {
+        size_type size() const {return avail-dat;} // Esamas dydis ( v.size();)
+        size_type max_size() const {return std::numeric_limits<size_type>::max();}  // Max dydis (v.max_size();)
+        void resize(size_type sz) { // Pakeisti dydį (be reikšmės) (v.resize(10);)
             if (sz < size()) {
                 iterator it = dat + sz;
                 while (it != avail) {
@@ -89,7 +87,7 @@ class MyVector{
                 avail = dat + sz;
             }
         }
-        void resize(size_type sz, const value_type& value) {
+        void resize(size_type sz, const value_type& value) { // Pakeisti dydį (su reikšme) (v.resize(5, 7);)
             if (sz > capacity()) {
                 grow(sz);
             }
@@ -101,22 +99,22 @@ class MyVector{
             }
         }
 
-        size_type capacity() const {return limit-dat;}
-        bool empty() const noexcept { return size() == 0;}
-        void reserve (size_type n) {
+        size_type capacity() const {return limit-dat;}  // Kiek capacity turi
+        bool empty() const noexcept { return size() == 0;} // Ar vektorius tuscias
+        void reserve (size_type n) { // rezervuoja vieta
             if (n > capacity()) {
                 grow(n);
             }
         }
-        void shrink_to_fit(){
+        void shrink_to_fit(){ // Sumazina talpa iki dydzio
             if (limit > avail) 
             limit = avail;
         }
 
     // Elemento access
-        T& operator[] (size_type n) {return dat[n];}
-        const T& operator[] (size_type n) const {return dat[n];}
-        reference at (size_type n) {
+        T& operator[] (size_type n) {return dat[n];} // Prieiga be ribų tikrinimo
+        const T& operator[] (size_type n) const {return dat[n];} // cout << v[1];
+        reference at (size_type n) { // tikrina ribas
             if (n >= size() || n < 0)
                 throw std::out_of_range("Index out of range");
             return dat[n];
@@ -126,19 +124,19 @@ class MyVector{
                 throw std::out_of_range("Index out of range");
             return dat[n];
         }
-        reference front() {
+        reference front() { // Pirmas elementas
             return dat[0];
         };
         const_reference front() const {
             return dat[0];
         }
         reference back() {
-            return dat[size() - 1];
+            return dat[size() - 1]; // Paskutinis elementas
         }
         const_reference back() const {
             return dat[size() - 1];
         }
-        value_type* data() noexcept {
+        value_type* data() noexcept { // Pointeris į duomenis
             return dat;
         }
         const value_type* data() const noexcept {
@@ -147,33 +145,33 @@ class MyVector{
 
     // Modifikatoriai
         template <class InputIterator>  
-        void assign (InputIterator first, InputIterator last) {
+        void assign (InputIterator first, InputIterator last) { // Priskiria iš intervalo
             uncreate();
             create(first, last);
         }
-        void assign (size_type n, const value_type& val) {
+        void assign (size_type n, const value_type& val) { // Priskiria n reikšmių (v.assign(4, 99);)
             uncreate();
             create(n, val);
         }
-        void assign (std::initializer_list<value_type> il) {
+        void assign (std::initializer_list<value_type> il) { // Priskiria iš sąrašo (v.assign({1,2,3});)
             uncreate();
             create(il);
         }
-        void push_back (const value_type& t) {
+        void push_back (const value_type& t) { // Prideda elementą
             if (avail==limit) 
                 grow();
             unchecked_append(t);
         }
-        void push_back (value_type&& val) {
+        void push_back (value_type&& val) { // Prideda (move)
             if (avail == limit)
                 grow();
             unchecked_append(val);
         }
-        void pop_back() {
+        void pop_back() { // Pasalina paskutini elementa
             if (avail != dat)
                 alloc.destroy(--avail);
         }
-        iterator insert(iterator pos, const T &value) {
+        iterator insert(iterator pos, const T &value) { // Įterpia vieną elementą į nurodytą poziciją
             size_type index = pos - begin();
             size_type numNewElements = 1; // Kadangi įterpiame vieną elementą
 
@@ -182,16 +180,16 @@ class MyVector{
                 reserve((size() + numNewElements) * 2);
             }
 
-            // Perkelkite elementus, kad atsirastų vietos naujam elementui
+            // Perkelia elementus, kad atsirastų vietos naujam elementui
             std::move_backward(dat + index, avail, avail + numNewElements);
             // Insert nauja elementa
             dat[index] = value;
             // Update dydi
             avail += numNewElements;
 
-            return dat + index; // Grąžinti iteratorių, rodantį į įterptą elementą
+            return dat + index; // Grazinti iteratoriu, rodanti i iterpta elementa
 }
-        iterator insert(iterator pos, size_type count, const T& value) {
+        iterator insert(iterator pos, size_type count, const T& value) { // Įterpia count reikšmių
             size_type index = pos - dat;
             if (size() + count > capacity()) {
             reserve(size() + count);
@@ -204,7 +202,7 @@ class MyVector{
 
         return pos;
 }
-        iterator erase(iterator position) {
+        iterator erase(iterator position) { // Pašalina vieną elementą ( v.erase(v.begin()+3);)
             if (position < dat || position > avail) {
                 throw std::out_of_range("Index'as isejo is riibu");
             }
@@ -214,7 +212,7 @@ class MyVector{
 
             return position;
         }
-        iterator erase(iterator first, iterator last) {
+        iterator erase(iterator first, iterator last) { // Pašalina intervalą (v.erase(v.begin()+2, v.begin()+5);)
             iterator new_available = std::uninitialized_copy(last, avail, first);
 
             iterator it = avail;
@@ -226,64 +224,64 @@ class MyVector{
             return last;
         }
 
-        void swap(MyVector& x) {
+        void swap(MyVector& x) { // Sukeičia (swap)
             std::swap(dat, x.dat);
             std::swap(avail, x.avail);
             std::swap(limit, x.limit);
         }
-        void clear() noexcept {
+        void clear() noexcept {  // Pašalina visus duomenis
             uncreate();
         }
 
     //RELATION OPERATORS
-        bool operator== (const MyVector<T>& other) const {
+        bool operator== (const MyVector<T>& other) const { // Tikrina ar vektoriai lygūs
             if (size() != other.size()) {
                 return false;
             }
 
             return std::equal(begin(), end(), other.begin());
         }
-        bool operator!= (const MyVector<T>& other) const {
+        bool operator!= (const MyVector<T>& other) const { // Nelygumo operatorius
             return !(*this == other);
         }
-        bool operator < (const MyVector<T> & other) const {
+        bool operator < (const MyVector<T> & other) const { // Maziau
             return std::lexicographical_compare(begin(), end(), other.begin(), other.end());
         }
-        bool operator <= (const MyVector<T> & other) const {
+        bool operator <= (const MyVector<T> & other) const { //Maziau arba lygu
             return !(other < *this);
         }
-        bool operator > (const MyVector<T> & other) const {
+        bool operator > (const MyVector<T> & other) const { // Daugiau
             return std::lexicographical_compare(other.begin(), other.end(), begin(), end());
         }
-        bool operator >= (const MyVector<T> & other) const {
+        bool operator >= (const MyVector<T> & other) const { //Daugiau arba lygu
             return !(other > *this);
         }
 
-        void swap (MyVector<T>& x, MyVector<T>& y) {
+        void swap (MyVector<T>& x, MyVector<T>& y) { // swap
             std::swap(x,y);
         }
 
-        static int reallocations;
-        static void resetReallocations() { reallocations = 0; }
-        static int getReallocations() { return reallocations; }
+        static int reallocations; 
+        static void resetReallocations() { reallocations = 0; }// Nustato 0
+        static int getReallocations() { return reallocations; } // Grazina kiek perskirstymu buvo
 
 
     private:
-        iterator dat;
-        iterator avail;
-        iterator limit;
-        std::allocator<T> alloc;
-        void create() {dat = avail = limit = nullptr;}
-        void create (size_type n, const T& val) {
+        iterator dat; //Prad. pointeris
+        iterator avail; // Pirmas laisvas elementas
+        iterator limit; // RIba pabaigos
+        std::allocator<T> alloc; //atminties valdymas
+        void create() {dat = avail = limit = nullptr;} // Tuscias prad.
+        void create (size_type n, const T& val) { //sukuroia n elementu su reiksme
             dat = alloc.allocate(n);
             limit = avail = dat + n;
             std::uninitialized_fill(dat, limit, val);
         }
-        void create(const_iterator i, const_iterator j) {
+        void create(const_iterator i, const_iterator j) { // Sukuria iš intervalo
             dat = alloc.allocate(j - i);
             limit = avail = std::uninitialized_copy(i, j, dat);
         }
-        void uncreate(){
+        void uncreate(){ // Atlaisvina
             if (dat) {
                 iterator it = avail;
                 while (it != dat) {
@@ -293,7 +291,7 @@ class MyVector{
             }
             dat = limit = avail = nullptr;
         }
-        void grow(size_type new_capacity = 1) {
+        void grow(size_type new_capacity = 1) { //Didina capacity
             ++reallocations;
             size_type new_size = std::max(new_capacity, 2 * capacity());
             iterator new_data = alloc.allocate(new_size);
